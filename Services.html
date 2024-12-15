@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Coffee Bliss</title>
+    <style>
+        /* CSS Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #971414fa;
+            color: white;
+            text-align: center;
+            padding: 1.5em 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2em auto;
+            padding: 1em;
+        }
+        .service {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2em;
+            justify-content: space-around;
+        }
+        .service-item {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 1.5em;
+            width: 300px;
+            transition: transform 0.3s;
+        }
+        .service-item:hover {
+            transform: scale(1.05);
+        }
+        .service-item img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .service-item h3 {
+            margin: 1em 0 0.5em;
+        }
+        .service-item p {
+            font-size: 1em;
+            line-height: 1.6;
+        }
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background-color: #971414fa;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Services by Coffee Bliss</h1>
+        <p>Temukan apa yang membuat Coffee Bliss menjadi destinasi kopi yang sempurna untuk Anda./p>
+    </header>
+
+    <div class="container">
+        <div class="service">
+            <div class="service-item">
+                <img src="barista service.jpeg" alt="Barista Service">
+                <h3>Expert Barista Service</h3>
+                <p>Barista terampil kami meracik setiap cangkir kopi dengan sempurna, memastikan pengalaman yang tak terlupakan.</p>
+            </div>
+            <div class="service-item">
+                <img src="fast delivery.jpeg" alt="Delivery Service">
+                <h3>Fast Delivery</h3>
+                <p>Nikmati kopi favorit Anda di rumah dengan layanan pengantaran kami yang handal dan cepat.</p>
+            </div>
+            <div class="service-item">
+                <img src="cozy workspace.jpeg" alt="Cozy Workspace">
+                <h3>Cozy Workspace</h3>
+                <p>Butuh tempat untuk bekerja atau bersantai? Toko kami menawarkan lingkungan yang nyaman dan produktif untuk semua orang.</p>
+            </div>
+            <div class="service-item">
+                <img src="event hosting.jpeg" alt="Event Hosting">
+                <h3>Event Hosting</h3>
+                <p>Dari pertemuan pribadi hingga acara perusahaan, tempat kami sangat cocok untuk segala acara.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Coffee Bliss. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript for interactivity (optional)
+        const serviceItems = document.querySelectorAll('.service-item');
+
+        serviceItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const serviceTitle = item.querySelector('h3').innerText;
+                alert(`Learn more about our '${serviceTitle}' service on the Services page!`);
+            });
+        });
+    </script>
+</body>
+</html>

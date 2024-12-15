@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="https://storage.googleapis.com/a1aa/image/lG3Ur5RjpH6uLxrUeAKQOI1RNqwULq50ih3FIYAc1T4xfF7TA.jpg" alt="Coffee Shop Logo" width="50" height="50">
+        </div>
+        <div class="contact-info">
+            <i class="fas fa-phone-alt"></i>
+            <span>Booking Table: +62 555-123-4567</span>
+        </div>
+        <div class="nav-links">
+            <a href="Biography.html">Biography</a>
+            <a href="Services.html">Services</a>
+            <a href="Product.html">Product</a>
+            <a href="Contact us.html">Contact Us</a>
+            <a href="Add cart.html">Add Cart</a>
+        </div>
+        <div class="cart">
+            <i class="fas fa-shopping-cart"></i>
+            <span>$ add cart </span>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <img src="https://storage.googleapis.com/a1aa/image/Q8qci6UtOG7bCZezETPfa6oHxeRBCPYUPUKgEEagYPELfXsPB.jpg" alt="Background image of coffee being poured" width="1920" height="1080">
+        <div class="content">
+            <h2>KEDAI KOPI TERBAIK</h2>
+            <h1>Kopi dari Perkebunan Cerah Terbaik</h1>
+            <button class="btn">Shop Now</button>
+        </div>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+
+    <!-- Welcome Header -->
+    <header>
+        <h1>Selamat datang di Coffee Bliss</h1>
+        <p>Cangkir Anda yang sempurna, setiap saat.</p>
+    </header>
+
+    <!-- Coffee Menu Section -->
+    <div class="container">
+        <h2>Our Menu</h2>
+        <div class="menu">
+            <div class="menu-item">
+                <img src="espresso.jpeg" alt="Espresso">
+                <h3>Espresso</h3>
+                <p>Bidikan kopi yang kaya dan berani, sangat seimbang.</p>
+                <button onclick="orderItem('Espresso')">Order</button>
+            </div>
+            <div class="menu-item">
+                <img src="latte.jpeg" alt="Latte">
+                <h3>Latte</h3>
+                <p>Lembut dan lembut, dengan susu kukus dan sedikit espresso.</p>
+                <button onclick="orderItem('Latte')">Order</button>
+            </div>
+            <div class="menu-item">
+                <img src="Cappuccino.jpeg" alt="Cappuccino">
+                <h3>Cappuccino</h3>
+                <p>Espresso, susu kukus, dan busa dengan porsi yang sama.</p>
+                <button onclick="orderItem('Cappuccino')">Order</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Non-Coffee Menu Section -->
+    <div class="container">
+        <h2>Non-Coffee</h2>
+        <div class="menu">
+            <div class="menu-item">
+                <img src="lycee yakult.jpeg" alt="Lycee Yakult">
+                <h3>Lycee Yakult</h3>
+                <p>Perpaduan menyegarkan antara rasa leci dan minuman yakult.</p>
+                <button onclick="orderItem('Lycee Yakult')">Order</button>
+            </div>
+            <div class="menu-item">
+                <img src="matcha.jpeg" alt="Matcha">
+                <h3>Matcha</h3>
+                <p>Matcha yang lezat dengan susu kukus yang lembut.</p>
+                <button onclick="orderItem('Matcha')">Order</button>
+            </div>
+            <div class="menu-item">
+                <img src="Chocolate Milkshake.jpeg" alt="Chocolate Milkshake">
+                <h3>Chocolate Milkshake</h3>
+                <p>Milkshake cokelat yang kaya rasa dan lembut.</p>
+                <button onclick="orderItem('Chocolate Milkshake')">Order</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Coffee Bliss. All Rights Reserved.
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

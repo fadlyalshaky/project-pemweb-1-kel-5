@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Products and Merchandise - Coffee Bliss</title>
+    <style>
+        /* CSS Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #971414fa;
+            color: white;
+            text-align: center;
+            padding: 1.5em 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2em auto;
+            padding: 1em;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2em;
+            justify-content: space-around;
+        }
+        .product-item {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(153, 108, 108, 0.1);
+            text-align: center;
+            padding: 1.5em;
+            width: 300px;
+            transition: transform 0.3s;
+        }
+        .product-item:hover {
+            transform: scale(1.05);
+        }
+        .product-item img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .product-item h3 {
+            margin: 1em 0 0.5em;
+        }
+        .product-item p {
+            font-size: 1em;
+            line-height: 1.6;
+        }
+        .product-item .price {
+            font-weight: bold;
+            margin: 1em 0;
+        }
+        .buy-now {
+            display: inline-block;
+            margin: 1em auto;
+            padding: 0.8em 1.5em;
+            background-color: #971414fa;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        .buy-now:hover {
+            background-color: #971414fa;
+        }
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background-color: #971414fa;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Our Products and Merchandise</h1>
+        <p>Explore our range of premium coffee products and exclusive merchandise.</p>
+    </header>
+
+    <div class="container">
+        <div class="products">
+            <!-- Coffee Products -->
+            <div class="product-item">
+                <img src="Premium Coffee Beans.jpeg" alt="Coffee Bag">
+                <h3>Premium Coffee Beans</h3>
+                <p>Perpaduan khas kami dari biji kopi pilihan untuk menghasilkan minuman yang sempurna.</p>
+                <p class="price">Rp45.000</p>
+                <button class="buy-now" onclick="addToCart('Premium Coffee Beans')">Buy Now</button>
+            </div>
+            <div class="product-item">
+                <img src="Espresso Capsules.jpeg" alt="Coffee Capsules">
+                <h3>Espresso Capsules</h3>
+                <p>Kapsul yang nyaman dan beraroma yang kompatibel dengan sebagian besar mesin.</p>
+                <p class="price">Rp220.000</p>
+                <button class="buy-now" onclick="addToCart('Espresso Capsules')">Buy Now</button>
+            </div>
+            <div class="product-item">
+                <img src="Bottled Cold Brew.jpeg" alt="Cold Brew">
+                <h3>Bottled Cold Brew</h3>
+                <p>Kopi seduh dingin yang menyegarkan dan siap diminum.</p>
+                <p class="price">Rp80.000</p>
+                <button class="buy-now" onclick="addToCart('Bottled Cold Brew')">Buy Now</button>
+            </div>
+
+            <!-- Merchandise -->
+            <div class="product-item">
+                <img src="Signature Coffee Mug.jpeg" alt="Coffee Mug">
+                <h3>Signature Coffee Mug</h3>
+                <p>Nikmati kopi Anda dengan penuh gaya dengan cangkir kopi bermerek kami.</p>
+                <p class="price">Rp65.000</p>
+                <button class="buy-now" onclick="addToCart('Signature Coffee Mug')">Buy Now</button>
+            </div>
+            <div class="product-item">
+                <img src="Coffee Bliss T-Shirt.jpeg" alt="T-Shirt">
+                <h3>Coffee Bliss T-Shirt</h3>
+                <p>Tunjukkan kecintaan Anda pada kopi dengan kaos kami yang bergaya dan nyaman.</p>
+                <p class="price">Rp52.000</p>
+                <button class="buy-now" onclick="addToCart('Coffee Bliss T-Shirt')">Buy Now</button>
+            </div>
+            <div class="product-item">
+                <img src="Reusable Tote Bag.jpeg" alt="Tote Bag">
+                <h3>Reusable Tote Bag</h3>
+                <p>Bawalah barang-barang penting Anda dalam tas jinjing bermerek kami yang ramah lingkungan.</p>
+                <p class="price">Rp70.000</p>
+                <button class="buy-now" onclick="addToCart('Reusable Tote Bag')">Buy Now</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Coffee Bliss. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript for interactivity
+        function addToCart(product) {
+            alert(`${product} has been added to your cart!`);
+        }
+    </script>
+</body>
+</html>

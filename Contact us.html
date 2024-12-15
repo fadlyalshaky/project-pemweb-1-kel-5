@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Coffee Bliss</title>
+    <style>
+        /* CSS Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #971414fa;
+            color: white;
+            text-align: center;
+            padding: 1.5em 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 1em;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 0.8em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 0.8em;
+            border: none;
+            border-radius: 5px;
+            background-color: #971414fa;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #971414fa;
+        }
+        .contact-info {
+            margin-top: 2em;
+            text-align: center;
+        }
+        .contact-info p {
+            margin: 0.5em 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you. Get in touch with us!</p>
+    </header>
+
+    <div class="container">
+        <h2>Kirim Pesan Kepada Kami</h2>
+        <form id="contactForm">
+            <label for="name">Nama</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your email" required>
+
+            <label for="message">Pesan dan kesan</label>
+            <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+
+        <div id="responseMessage" style="margin-top: 1em; color: green; display: none;">
+            Thank you for reaching out! We'll get back to you shortly.
+        </div>
+    </div>
+
+    <div class="contact-info">
+        <h2>Our Location</h2>
+        <p>Coffee Bliss, 123 Coffee Street, Java City</p>
+        <p>Email: info@coffeebliss.com | Phone: +62 555-123-4567</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Coffee Bliss. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript for form submission
+        const contactForm = document.getElementById('contactForm');
+        const responseMessage = document.getElementById('responseMessage');
+
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from refreshing the page
+
+            // Simulate form submission
+            responseMessage.style.display = 'block';
+            contactForm.reset(); // Clear the form fields
+        });
+    </script>
+</body>
+</html>

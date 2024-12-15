@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Founder Biography - Coffee Bliss</title>
+    <style>
+        /* CSS Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #971414fa;
+            color: white;
+            text-align: center;
+            padding: 1.5em 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 1em;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .bio-header {
+            text-align: center;
+        }
+        .bio-image {
+            display: block;
+            width: 150px;
+            height: 150px;
+            margin: 1em auto;
+            border-radius: 50%;
+            border: 4px solid #971414fa;
+        }
+        .bio-text {
+            text-align: justify;
+            line-height: 1.6;
+        }
+        .button {
+            display: inline-block;
+            margin: 1.5em auto;
+            padding: 0.8em 1.5em;
+            background-color: #971414fa;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1em;
+            text-align: center;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #971414fa;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About the Founder</h1>
+        <p>Discover the story behind Coffee Bliss</p>
+    </header>
+
+    <div class="container">
+        <div class="bio-header">
+            <img src="ceo.jpeg" alt="Founder" class="bio-image">
+            <h2>John Doe</h2>
+            <p>Founder of Coffee Bliss</p>
+        </div>
+        <div class="bio-text">
+            <p>John Doe, visioner di balik Coffee Bliss, memulai perjalanannya sebagai barista di sebuah kedai kopi kecil. Selama bertahun-tahun, hasratnya untuk meracik secangkir kopi yang sempurna berkembang menjadi sebuah misi untuk membawa kegembiraan dan kehangatan dalam kehidupan masyarakat. Pada tahun 2010, ia mendirikan Coffee Bliss, yang dengan cepat menjadi favorit di antara para pencinta kopi karena racikan kopi yang berkualitas dan suasananya yang ramah.
+
+                Translated with DeepL.com (free version)</p>
+
+            <p>Komitmen John terhadap keberlanjutan dan perdagangan yang adil telah menginspirasi banyak orang. Dia percaya dalam mendukung petani lokal dan memberikan kopi yang bersumber dari sumber yang etis. Saat ini, Coffee Bliss berdiri sebagai bukti dedikasi dan kecintaannya terhadap budaya kopi.</p>
+        </div>
+        <a class="button" id="readMoreButton">Read More</a>
+    </div>
+
+    <script>
+        // JavaScript for interactivity
+        const button = document.getElementById('readMoreButton');
+
+        button.addEventListener('click', function() {
+            alert('Thank you for your interest in John Doe! Visit our About Us page to learn more about his journey.');
+        });
+    </script>
+</body>
+</html>

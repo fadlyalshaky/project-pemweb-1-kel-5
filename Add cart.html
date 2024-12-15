@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Coffee Bliss</title>
+    <style>
+        /* CSS Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #971414fa;
+            color: white;
+            text-align: center;
+            padding: 1.5em 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 1em;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .product-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5em;
+        }
+        .product-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding: 1em 0;
+        }
+        .product-item:last-child {
+            border-bottom: none;
+        }
+        .product-info {
+            flex: 1;
+        }
+        .product-info h3 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+        .product-info p {
+            margin: 0.5em 0;
+            font-size: 0.9em;
+            color: #555;
+        }
+        .product-price {
+            font-weight: bold;
+        }
+        .total {
+            text-align: right;
+            font-size: 1.2em;
+            margin-top: 2em;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 0.8em;
+            border: none;
+            border-radius: 5px;
+            background-color: #971414fa;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+            margin-top: 1em;
+        }
+        button:hover {
+            background-color: #971414fa;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Checkout</h1>
+        <p>Review your coffee selections before completing your purchase.</p>
+    </header>
+
+    <div class="container">
+        <h2>Your Cart</h2>
+        <div class="product-list" id="productList">
+            <!-- Products will be dynamically added here -->
+        </div>
+        <p class="total" id="totalPrice">Total: <Rp></Rp>0.00</p>
+        <button id="checkoutButton">Proceed to Checkout</button>
+    </div>
+
+    <script>
+        // JavaScript for managing cart and checkout
+        const products = [
+            {
+                name: "Espresso",
+                description: "Bidikan kopi yang kaya dan berani, sangat seimbang.",
+                price: 14.000
+            },
+            {
+                name: "Matcha",
+                description: "Matcha yang lezat dengan susu kukus yang lembut.",
+                price: 16.000
+            },
+            {
+                name: "Latte",
+                description: "Lembut dan lembut, dengan susu kukus dan sedikit espresso.",
+                price: 19.000
+            }
+        ];
+
+        const productList = document.getElementById('productList');
+        const totalPriceElement = document.getElementById('totalPrice');
+
+        let total = 0;
+
+        // Render products in the cart
+        products.forEach(product => {
+            const productItem = document.createElement('div');
+            productItem.className = 'product-item';
+
+            const productInfo = document.createElement('div');
+            productInfo.className = 'product-info';
+            productInfo.innerHTML = `<h3>${product.name}</h3><p>${product.description}</p>`;
+
+            const productPrice = document.createElement('div');
+            productPrice.className = 'product-price';
+            productPrice.textContent = `$${product.price.toFixed(2)}`;
+
+            productItem.appendChild(productInfo);
+            productItem.appendChild(productPrice);
+
+            productList.appendChild(productItem);
+
+            total += product.price;
+        });
+
+        // Update total price
+        totalPriceElement.textContent = `Total: $${total.toFixed(2)}`;
+
+        // Checkout button functionality
+        const checkoutButton = document.getElementById('checkoutButton');
+        checkoutButton.addEventListener('click', () => {
+            alert('Thank you for your purchase!');
+            productList.innerHTML = '';
+            totalPriceElement.textContent = 'Total: $0.00';
+        });
+    </script>
+</body>
+</html>
